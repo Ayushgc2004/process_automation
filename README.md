@@ -70,7 +70,3 @@ summary_report.txt - summary_report.html
 -   Replace mock CRM/email with real APIs
 
 ------------------------------------------------------------------------
-
-✔ Clean modular design\
-✔ Fault-tolerant workflow\
-✔ Production-ready structure

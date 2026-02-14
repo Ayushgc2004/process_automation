@@ -17,7 +17,7 @@ Pure Python Modular Pipeline
 ## How to Run
 
 pip install -r requirements.txt
-python src/main.py
+python main.py
 
 ## Failure Handling
 - Each lead processed independently

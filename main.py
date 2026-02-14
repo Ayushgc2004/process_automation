@@ -1,7 +1,7 @@
 from modules.data_cleaner import clean_data
 from modules.crm_integration import send_to_crm
 from modules.email_service import send_email
-from modules.reporting import generate_report
+from modules.report import generate_report
 
 def main():
     df, stats = clean_data("data/leads.xlsx", "data/cleaned_leads.xlsx")
@@ -26,4 +26,5 @@ def main():
     generate_report(stats, crm_success, crm_fail, email_success, email_fail)
 
 if __name__ == "__main__":
+
     main()

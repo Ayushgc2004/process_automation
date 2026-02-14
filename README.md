@@ -1,35 +1,46 @@
 ## Architecture
-Pure Python Modular Pipeline
+Chosen Approach: Modular Python Pipeline
 
-## Why This Architecture?
-- Lightweight
-- Easy to maintain
-- No unnecessary orchestration overhead
-- Easily scalable to Airflow or Celery later
-- Cron-compatible
+The system follows a layered modular architecture:
 
-## Execution Flow
-1. Data Cleanup
-2. CRM Integration
-3. Email Trigger (only after CRM success)
-4. Report Generation
+Input (Excel)
+     ↓
+Data Cleaning Module
+     ↓
+CRM Integration Module
+     ↓
+Email Automation Module
+     ↓
+Reporting Module
+     ↓
+Output Reports
 
-## How to Run
+Folder Structure:
+process_automation/
+│
+├── main.py
+├── requirements.txt
+│
+├── data/
+│   ├── leads.xlsx
+│   └── cleaned_leads.xlsx
+│
+├── modules/
+│   ├── data_cleaner.py
+│   ├── crm_integration.py
+│   ├── email_service.py
+│   └── reporting.py
+│
+└── reports/
 
-pip install -r requirements.txt
-python main.py
+Why This Architecture?
 
-## Failure Handling
-- Each lead processed independently
-- CRM failures do not stop pipeline
-- Email sent only after CRM success
-- All failures logged in report
+-Clear separation of concerns
 
-## Scalability Improvements
-- Replace mock CRM with real REST API
-- Use async requests for faster processing
-- Add retry mechanism
-- Add logging framework
-- Add Docker container
-- Deploy via cron or Airflow
-- Add database storage
+-Easy to test individual modules
+
+-Easy to scale or replace components
+
+-Production-ready structure
+
+-Simple deployment

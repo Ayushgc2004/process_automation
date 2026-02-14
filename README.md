@@ -1,4 +1,4 @@
-# Process Automation -- Lead Pipeline
+# Process Automation
 
 ## Overview
 

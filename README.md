@@ -34,6 +34,7 @@ Each module is separated for maintainability and scalability.
 
 ## How to Run
 pip install -r requirements.txt
+
 python main.py
 
 Outputs: - cleaned_leads.xlsx - summary_report.json -

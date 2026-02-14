@@ -33,13 +33,8 @@ Each module is separated for maintainability and scalability.
 ------------------------------------------------------------------------
 
 ## How to Run
-
-``` bash
-python -m venv venv
-venv\Scripts\activate   # or source venv/bin/activate
 pip install -r requirements.txt
 python main.py
-```
 
 Outputs: - cleaned_leads.xlsx - summary_report.json -
 summary_report.txt - summary_report.html
